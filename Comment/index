@@ -1,0 +1,31 @@
+Có ba loại hàm comment trong javascript
+1/ 
+Single-line comment: được sử dụng để ghi chú trên một dòng duy nhất. Để tạo một single-line comment,
+ bạn có thể sử dụng hai dấu gạch chéo (//) trước đoạn mã bạn muốn ghi chú. Ví dụ:
+
+ // Đây là một single-line comment
+var a = 5; // Gán giá trị 5 cho biến a
+
+2/
+Multi-line comment: được sử dụng để ghi chú trên nhiều dòng. Để tạo một multi-line comment, 
+bạn có thể sử dụng các ký tự /* và */ để bao quanh đoạn mã bạn muốn ghi chú. Ví dụ:
+
+/*
+Đây là một multi-line comment
+Bạn có thể ghi chú trên nhiều dòng như thế này
+*/
+var b = 10; /* Gán giá trị 10 cho biến b */
+
+3/
+Doc comment: được sử dụng để tạo tài liệu về hàm hoặc lớp. Đây là loại comment được sử dụng để tạo tài liệu trong các công cụ như JSDoc.
+Để tạo một doc comment, bạn có thể sử dụng các ký tự /** và */ để bao quanh đoạn mã bạn muốn ghi chú. Ví dụ:
+
+/**
+ * Đây là một doc comment
+ * @param {number} x - số thực
+ * @param {number} y - số thực khác
+ * @returns {number} Tổng của hai số
+ */
+function sum(x, y) {
+  return x + y;
+}

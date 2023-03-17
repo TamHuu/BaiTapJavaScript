@@ -1,0 +1,14 @@
+Trong JavaScript, chúng ta có thể khai báo biến bằng 3 cách sau:
+1/ Var
+Cách khai báo này đã được sử dụng trong nhiều năm và là cách khai báo biến cổ điển trong JavaScript.
+ Tuy nhiên, hiện nay cách này không còn được khuyến khích sử dụng nữa,
+ bởi vì nó có một số hạn chế và các cách khai báo khác có tính năng tốt hơn. 
+
+ var x = 5;
+
+ 2/ Let
+ Cách khai báo này được giới thiệu trong phiên bản ECMAScript 6 (ES6) của JavaScript và được khuyến khích sử dụng thay thế cho var. 
+ let cho phép khai báo biến với phạm vi hoạt động (scope) bị giới hạn trong một khối lệnh (block) cụ thể.
+
+3/ Const
+Biến được khai báo bằng const không thể được gán lại giá trị sau khi đã được gán giá trị ban đầu, 

@@ -1,0 +1,38 @@
+Arrow function là một cú pháp ngắn gọn để khai báo hàm trong JavaScript. Arrow function có thể giúp giảm thiểu đáng kể việc viết mã, đồng thời nó cũng giúp làm tăng khả năng đọc và hiểu mã.
+
+Một ví dụ đơn giản của arrow function:
+
+const multiply = (a, b) => a * b;
+
+Arrow function có thể được sử dụng khi bạn cần định nghĩa một hàm ngắn gọn và bạn không
+cần phải sử dụng this hoặc các hàm 
+được định nghĩa bằng function.
+
+Ví dụ, khi bạn muốn tính toán giá trị của một mảng, bạn có thể sử dụng arrow function 
+để thực hiện việc tính toán đó như sau:
+
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(number => number ** 2);
+
+Trong ví dụ này, chúng ta sử dụng phương thức map() để tạo ra một mảng mới
+ với các giá trị bình phương của mảng ban đầu. Arrow function được sử dụng để định nghĩa 
+ hành động bình phương của mỗi số trong mảng.
+
+Bạn cũng có thể sử dụng arrow function để viết các phương thức bên trong 
+các đối tượng. 
+Ví dụ:
+const person = {
+  name: 'John',
+  age: 30,
+  greet: () => {
+    console.log(`Hello, my name is ${this.name}. I am ${this.age} years old.`);
+  }
+};
+
+Tuy nhiên, trong trường hợp này, bạn không thể sử dụng this để truy cập các thuộc tính
+ của đối tượng hiện tại, vì arrow function không có ngữ cảnh của this riêng.
+
+Trong tổng quát, bạn nên sử dụng arrow function trong các trường hợp bạn cần
+ một cú pháp ngắn gọn và đơn giản để định nghĩa các hàm. Nếu bạn cần sử dụng this
+  hoặc các hàm được định nghĩa bằng function, bạn nên sử dụng function
+ thay vì arrow function.

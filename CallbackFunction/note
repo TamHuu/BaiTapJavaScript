@@ -1,0 +1,27 @@
+Callback function (hay còn được gọi là hàm gọi lại) là một hàm được truyền vào một hàm khác như 
+một tham số và được gọi bởi hàm đó. Trong JavaScript, callback function thường được sử dụng để xử lý các hoạt động bất đồng bộ (asynchronous)
+hoặc xử lý các tác vụ không đồng bộ như tải dữ liệu từ mạng, xử lý tệp, v.v...
+
+Ví dụ, hãy xem xét một hàm loadData để tải dữ liệu từ server:
+
+function loadData(callback) {
+  // thực hiện việc tải dữ liệu từ server
+  // sau khi tải xong, gọi hàm callback với dữ liệu đã tải
+  callback(data);
+}
+Trong đoạn mã trên, loadData nhận một tham số callback là một hàm, và sau khi tải dữ liệu xong từ server, 
+nó gọi hàm callback với dữ liệu đã tải. Việc này cho phép chúng ta xử lý dữ liệu tải về một cách linh hoạt.
+
+Ví dụ, để sử dụng hàm loadData và xử lý dữ liệu tải về bằng một callback function, chúng ta có thể viết mã như sau:
+
+function process(data) {
+  // xử lý dữ liệu tải về ở đây
+}
+
+loadData(process);
+
+Trong đoạn mã trên, chúng ta khai báo một hàm process nhận dữ liệu tải về và xử lý nó. Sau đó, chúng ta gọi hàm loadData 
+và truyền process như là một callback function để xử lý dữ liệu tải về sau khi nó được tải về từ server.
+
+Callback function là một khái niệm rất quan trọng trong JavaScript và được sử dụng rộng rãi trong nhiều trường hợp, 
+đặc biệt là trong xử lý các hoạt động bất đồng bộ và xử lý sự kiện.

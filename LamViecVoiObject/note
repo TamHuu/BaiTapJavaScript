@@ -1,0 +1,45 @@
+Trong JavaScript, object là một kiểu dữ liệu phổ biến để lưu trữ và truy cập thông tin.
+ Dưới đây là một số cách phổ biến để làm việc với object trong JavaScript:
+
+ 1/Khai báo một object:
+ const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30
+};
+
+2/Truy cập thuộc tính của object:
+const firstName = person.firstName; // 'John'
+const age = person['age']; // 30
+
+3/Thêm hoặc cập nhật thuộc tính của object:
+person.email = 'john.doe@example.com';
+person['phone'] = '555-555-5555';
+person.age = 31;
+
+4/Lặp qua thuộc tính của object và thực hiện một hành động trên từng thuộc tính:
+for (const key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+// 'firstName: John'
+// 'lastName: Doe'
+// 'age: 31'
+// 'email: john.doe@example.com'
+// 'phone: 555-555-5555'
+
+5/Xóa thuộc tính của object:
+delete person.phone;
+
+6/Kiểm tra xem một thuộc tính có tồn tại trong object hay không:
+const hasEmail = 'email' in person; // true
+const hasPhone = person.hasOwnProperty('phone'); // false
+
+7/Sử dụng phương thức Object.keys() để lấy tất cả các keys của object:
+const keys = Object.keys(person); // ['firstName', 'lastName', 'age', 'email']
+
+8/Sử dụng phương thức Object.values() để lấy tất cả các giá trị của object:
+const values = Object.values(person); // ['John', 'Doe', 31, 'john.doe@example.com']
+
+
+ 9/Sử dụng phương thức Object.entries() để lấy tất cả các cặp key-value của object dưới dạng một mảng các mảng con:
+ const entries = Object.entries(person); // [['firstName', 'John'], ['lastName', 'Doe'], ['age', 31], ['email', 'john.doe@example.com']]

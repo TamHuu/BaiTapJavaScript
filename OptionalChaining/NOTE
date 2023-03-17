@@ -1,0 +1,47 @@
+Optional chaining là một tính năng mới trong ES2020 của JavaScript, cho phép truy cập các thuộc tính
+ của một đối tượng một cách an toàn, tránh gây lỗi khi một thuộc tính không tồn tại hoặc là null/undefined.
+
+Cú pháp của optional chaining là "?." và được sử dụng sau một đối tượng để truy cập thuộc tính của nó. 
+Nếu thuộc tính đó không tồn tại hoặc là null/undefined, thì kết quả trả về sẽ là undefined thay vì gây ra lỗi như khi sử dụng dấu chấm "." truy cập thuộc tính.
+
+Ví dụ:
+
+const user = {
+  name: 'John',
+  age: 30,
+  address: {
+    city: 'New York'
+  }
+};
+
+console.log(user.address.city); // 'New York'
+console.log(user.address.country); // undefined
+console.log(user.phone.number); // error: Cannot read property 'number' of undefined
+
+// sử dụng optional chaining
+console.log(user?.address?.city); // 'New York'
+console.log(user?.address?.country); // undefined
+console.log(user?.phone?.number); // undefined
+
+Ở ví dụ trên, khi sử dụng dấu "?" truy cập thuộc tính, nếu thuộc tính không tồn tại thì kết quả trả về
+ là undefined thay vì gây ra lỗi như khi sử dụng dấu chấm ".".
+
+Optional chaining cũng có thể được sử dụng với các phương thức của đối tượng:
+
+const user = {
+  name: 'John',
+  age: 30,
+  getAddress() {
+    return this.address;
+  }
+};
+
+console.log(user.getAddress().city); // 'New York'
+console.log(user.getAddress().country); // error: Cannot read property 'country' of undefined
+
+// sử dụng optional chaining
+console.log(user?.getAddress()?.city); // 'New York'
+console.log(user?.getAddress()?.country); // undefined
+
+Optional chaining là một tính năng rất hữu ích khi làm việc với các đối tượng lớn và phức tạp, giúp tránh gây ra các lỗi 
+không mong muốn khi truy cập thuộc tính không tồn tại hoặc là null/undefined.

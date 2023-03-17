@@ -1,0 +1,43 @@
+Trong JavaScript, có nhiều cách để làm việc với mảng. Sau đây là một số ví dụ:
+
+1/Khai báo một mảng:
+const fruits = ['apple', 'banana', 'orange'];
+
+2/Truy cập phần tử trong mảng:
+const firstFruit = fruits[0]; // 'apple'
+const lastFruit = fruits[fruits.length - 1]; // 'orange'
+
+3/Thêm phần tử vào mảng:
+fruits.push('grape'); // ['apple', 'banana', 'orange', 'grape']
+
+4/Xóa phần tử khỏi mảng:
+fruits.pop(); // ['apple', 'banana', 'orange']
+
+5/Lặp qua mảng và thực hiện một hành động trên từng phần tử:
+fruits.forEach(function(fruit) {
+  console.log(fruit);
+});
+// 'apple'
+// 'banana'
+// 'orange'
+
+6/Sử dụng phương thức map() để tạo một mảng mới dựa trên mảng gốc:
+const upperCaseFruits = fruits.map(function(fruit) {
+  return fruit.toUpperCase();
+});
+// ['APPLE', 'BANANA', 'ORANGE']
+
+7/Sử dụng phương thức filter() để lọc các phần tử trong mảng:
+const filteredFruits = fruits.filter(function(fruit) {
+  return fruit.length > 5;
+});
+// ['banana', 'orange']
+
+8/Sử dụng phương thức reduce() để tính tổng hoặc giá trị trung bình của một mảng:
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce(function(total, number) {
+  return total + number;
+}, 0);
+// 15
+const average = sum / numbers.length;
+// 3
