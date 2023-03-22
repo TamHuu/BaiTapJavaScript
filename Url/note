@@ -1,0 +1,26 @@
+Trong JavaScript, bạn có thể sử dụng các câu truy vấn sau để 
+truy cập đến các thông tin về URL hiện tại (tức là thông tin về window.location):
+
+1/Lấy địa chỉ URL hiện tại:
+
+window.location.href
+
+2/Lấy tên tên miền (domain) của URL hiện tại:
+
+window.location.hostname
+
+3/Lấy đường dẫn (pathname) của URL hiện tại:
+
+window.location.pathname
+
+4/Lấy thông tin về giao thức (protocol) của URL hiện tại:
+
+window.location.protocol
+
+5/Lấy số cổng (port number) của URL hiện tại:
+
+window.location.port
+
+6/Lấy tham số truy vấn (query parameters) của URL hiện tại:
+
+window.location.search

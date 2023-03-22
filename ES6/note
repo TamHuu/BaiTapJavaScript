@@ -1,0 +1,24 @@
+ES6 là viết tắt của ECMAScript 6, một phiên bản mới nhất của chuẩn ECMAScript (tiêu chuẩn cơ bản của ngôn ngữ lập trình JavaScript). 
+ES6 được phát hành vào năm 2015, còn được gọi là ECMAScript 2015.
+
+ES6 mang đến nhiều tính năng mới và cải tiến cho JavaScript, giúp cho việc lập trình trở nên dễ dàng và hiệu quả hơn. Một số tính năng mới trong ES6 bao gồm:
+
+1/Let và const: cho phép khai báo biến và hằng số trong phạm vi block thay vì phạm vi toàn cục.
+
+2/Arrow functions: cú pháp ngắn gọn để định nghĩa hàm.
+
+3/Template literals: cho phép sử dụng biểu thức chèn vào chuỗi bằng cú pháp ${...}.
+
+4/Classes: cú pháp để tạo ra các đối tượng và kế thừa trong JavaScript.
+
+5/Destructuring: cú pháp để giải nén giá trị của các đối tượng hoặc mảng vào các biến riêng lẻ.
+
+6/Default parameters: cho phép đặt giá trị mặc định cho các tham số trong hàm.
+
+7/Rest parameters: cho phép truyền số lượng tham số không giới hạn vào một hàm.
+
+8/Spread operator: cho phép trải rộng các phần tử trong một mảng hoặc đối tượng ra các phần tử riêng lẻ.
+
+9/Promises: một cơ chế để xử lý các yêu cầu bất đồng bộ trong JavaScript.
+
+10/Modules: cho phép tách mã vào các module riêng biệt để giúp quản lý mã dễ dàng hơn.
