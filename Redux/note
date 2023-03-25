@@ -1,27 +1,64 @@
-Redux là một thư viện quản lý trạng thái (state management library) cho ứng dụng JavaScript. Redux có thể được sử dụng với bất kỳ framework hoặc thư viện JavaScript nào, bao gồm ReactJS.
+; 1/ Redux là một thư viện quản lý trạng thái (state management library) cho ứng dụng JavaScript.
+;  Redux có thể được sử dụng với bất kỳ framework hoặc thư viện JavaScript nào, bao gồm ReactJS.
 
-Để vận hành Redux, bạn cần có các thành phần cơ bản như sau:
+; 2/ Để vận hành Redux, bạn cần có các thành phần cơ bản như sau:
 
-Store (Cửa hàng): Là nơi lưu trữ toàn bộ trạng thái của ứng dụng.
+; * Store (Cửa hàng): Là nơi lưu trữ toàn bộ trạng thái của ứng dụng.
 
-Action (Hành động): Là các đối tượng JavaScript đại diện cho một hành động sẽ được thực hiện bởi ứng dụng. Mỗi action có một thuộc tính "type" để xác định loại hành động đó.
+; * Action (Hành động): Là các đối tượng JavaScript đại diện cho một hành động sẽ được thực hiện bởi ứng dụng. 
+; Mỗi action có một thuộc tính "type" để xác định loại hành động đó.
 
-Reducer (Bộ giảm thiểu): Là các hàm xử lý các hành động và trả về trạng thái mới của ứng dụng. Reducer sẽ nhận vào một trạng thái hiện tại của ứng dụng và một action, sau đó trả về một trạng thái mới.
+; * Reducer (Bộ giảm thiểu): Là các hàm xử lý các hành động và trả về trạng thái mới của ứng dụng.
+;  Reducer sẽ nhận vào một trạng thái hiện tại của ứng dụng và một action, sau đó trả về một trạng thái mới.
 
-Dispatch (Phát hành): Là một phương thức để phát hành một action, nó sẽ chuyển action đó đến reducer để xử lý và cập nhật lại trạng thái của ứng dụng.
+; * Dispatch (Phát hành): Là một phương thức để phát hành một action,
+;  nó sẽ chuyển action đó đến reducer để xử lý và cập nhật lại trạng thái của ứng dụng.
 
-Để vận hành Redux, bạn cần thực hiện các bước sau:
 
-Cài đặt Redux: Sử dụng npm hoặc yarn để cài đặt Redux và React Redux.
 
-Tạo Store: Tạo một file store.js và import các thành phần cần thiết để tạo store. Sau đó, sử dụng hàm createStore để tạo store.
+; ==> Để vận hành Redux, bạn cần thực hiện các bước sau:
 
-Tạo Reducer: Tạo một hoặc nhiều file reducer để xử lý các hành động và trả về trạng thái mới của ứng dụng.
+; + Cài đặt Redux: Sử dụng npm hoặc yarn để cài đặt Redux và React Redux.
 
-Kết hợp Reducer: Sử dụng hàm combineReducers để kết hợp các reducer lại với nhau.
+; + Tạo Store: Tạo một file store.js và import các thành phần cần thiết để tạo store. Sau đó, sử dụng hàm createStore để tạo store.
 
-Tạo Action: Tạo các action để xác định các hành động sẽ được thực hiện.
+; + Tạo Reducer: Tạo một hoặc nhiều file reducer để xử lý các hành động và trả về trạng thái mới của ứng dụng.
 
-Tạo Component: Tạo các component trong ứng dụng của bạn và sử dụng connect để kết nối component với store.
+; + Kết hợp Reducer: Sử dụng hàm combineReducers để kết hợp các reducer lại với nhau.
 
-Dispatch Action: Sử dụng hàm dispatch để phát hành một action.
+; + Tạo Action: Tạo các action để xác định các hành động sẽ được thực hiện.
+
+; + Tạo Component: Tạo các component trong ứng dụng của bạn và sử dụng connect để kết nối component với store.
+
+; + Dispatch Action: Sử dụng hàm dispatch để phát hành một action.
+
+; Việc xử lý CRUD trong Redux được thực hiện thông qua các actions và reducers.
+;  Mỗi thao tác trong CRUD (tạo, đọc, cập nhật, xóa) sẽ có một action và reducer tương ứng.
+
+; Ví dụ, để tạo một bản ghi mới, bạn có thể khai báo một action tạo mới như sau:
+
+; const ADD_ITEM = 'ADD_ITEM';
+
+; function addItem(item) {
+;   return {
+;     type: ADD_ITEM,
+;     payload: item
+;   }
+; }
+; Sau đó, bạn có thể viết một reducer để xử lý action này như sau:
+
+; function itemsReducer(state = [], action) {
+;   switch (action.type) {
+;     case ADD_ITEM:
+;       return [...state, action.payload];
+;     default:
+;       return state;
+;   }
+; }
+; Reducer này sẽ thêm một bản ghi mới vào mảng state và trả về một mảng mới.
+
+; Tương tự, bạn có thể tạo các actions và reducers để đọc, cập nhật và xóa dữ liệu. Khi một action được gửi đến store,
+;  reducer sẽ xử lý action và cập nhật trạng thái của ứng dụng.
+
+; Tuy nhiên, để thực hiện CRUD trong Redux, bạn cần cấu hình một số công cụ hỗ trợ như redux-thunk
+;  hoặc redux-saga để thực hiện các tác vụ bất đồng bộ và xử lý các kết quả trả về từ server.

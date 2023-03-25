@@ -1,0 +1,83 @@
+
+Redux Toolkit là một thư viện bổ sung cho Redux, được thiết kế để giảm bớt sự phức tạp và làm cho việc sử dụng Redux dễ dàng hơn, 
+nhanh hơn và hiệu quả hơn. Redux Toolkit cung cấp một số công cụ và tiện ích giúp giảm thiểu số lượng mã cần viết, tối ưu hóa hiệu suất,
+ và tạo ra các ứng dụng Redux dễ bảo trì hơn.
+
+Một số ví dụ về Redux Toolkit:
+
+1/DefineSlice(): 
+
+Là một hàm giúp tạo ra các reducers và action creators trong Redux một cách dễ dàng hơn,
+ đồng thời cung cấp một cách tiếp cận giúp giảm thiểu code boilerplate.
+
+Ví dụ:
+import { createSlice } from '@reduxjs/toolkit'
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) => {
+      state.value += 1
+    },
+    decrement: (state) => {
+      state.value -= 1
+    },
+    reset: (state) => {
+      state.value = 0
+    },
+  },
+})
+
+export const { increment, decrement, reset } = counterSlice.actions
+
+export default counterSlice.reducer
+
+2/configureStore():
+
+ Là một hàm giúp tạo ra store của Redux với các middleware được tích hợp sẵn,
+  giúp giảm thiểu sự phức tạp và cung cấp một cách tiếp cận
+  dễ dàng hơn để tùy chỉnh cấu hình store.
+
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from './counterSlice'
+
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+})
+
+export default store
+
+3/createAsyncThunk(): 
+
+Là một hàm giúp tạo ra các thunks (actions) bất đồng bộ (asynchronous thunks) một cách dễ dàng, 
+đồng thời cung cấp tính năng xử lý lỗi và đưa ra các thông báo trạng thái cho người dùng.
+
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import api from './api'
+
+export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
+  const response = await api.fetchUsers()
+  return response.data
+})
+
+const usersSlice = createSlice({
+  name: 'users',
+  initialState: { data: [], status: 'idle', error: null },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchUsers.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(fetchUsers.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+        state.data = action.payload
+      })
+      .addCase(fetchUsers.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.error.message
+      })
+ 

@@ -1,0 +1,27 @@
+Hook useRef trong React được sử dụng để lưu trữ các tham chiếu đến các phần tử DOM hoặc các giá trị khác trong component.
+ Dưới đây là một số trường hợp nên sử dụng useRef:
+
+1/Truy cập phần tử DOM:
+
+ Khi bạn cần truy cập một phần tử DOM như input, textarea hoặc canvas, 
+ useRef có thể được sử dụng để lưu trữ tham chiếu đến phần tử đó. 
+ Điều này cho phép bạn truy cập và thay đổi các thuộc tính của phần tử DOM đó từ trong component của bạn.
+
+2/Lưu trữ giá trị không gây ra re-render: 
+
+Khi bạn cần lưu trữ một giá trị mà khi thay đổi không gây ra re-render cho component của bạn,
+ useRef có thể được sử dụng. Các giá trị được lưu trữ trong useRef không gây ra re-render bởi vì thay đổi giá trị đó không thay đổi state 
+ hoặc props của component.
+
+3/Lưu trữ trạng thái của component: 
+
+Khi bạn cần lưu trữ trạng thái của component nhưng không muốn thay đổi state hoặc props, 
+useRef có thể được sử dụng. Ví dụ, bạn có thể sử dụng useRef để lưu trữ các giá trị như số lần click, trạng thái menu, vị trí cuộn của trang, ...
+
+4/Thao tác với các giá trị của previous render: 
+Khi bạn cần thực hiện các thao tác với các giá trị của previous render của component, useRef có thể được sử dụng. 
+Ví dụ, bạn có thể sử dụng useRef để so sánh các giá trị của previous render và current render của component, 
+và thực hiện các thao tác khác nhau dựa trên kết quả so sánh đó.
+
+Lưu ý rằng, khi sử dụng useRef, bạn cần đảm bảo rằng các giá trị hoặc tham chiếu được lưu trữ trong useRef được sử dụng đúng cách.
+ Nếu sử dụng sai cách, các lỗi có thể xảy ra, chẳng hạn như gây ra memory leak hoặc thay đổi giá trị của phần tử DOM không đ

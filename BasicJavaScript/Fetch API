@@ -1,0 +1,33 @@
+; Fetch API là một API của trình duyệt giúp thực hiện các yêu cầu mạng bằng cách sử dụng Promise. 
+; Nó được sử dụng để tải tệp, truy vấn dữ liệu từ API hoặc thực hiện các hoạt động mạng khác.
+
+; Để sử dụng Fetch API, ta có thể sử dụng cú pháp như sau:
+; fetch(url)
+;   .then(response => response.json())
+;   .then(data => console.log(data))
+;   .catch(error => console.error(error))
+
+; Trong đó:
+
+; fetch(url) dùng để thực hiện yêu cầu HTTP đến địa chỉ url.
+;  Phương thức mặc định là GET, nhưng có thể sử dụng các phương thức khác như POST, PUT, DELETE bằng cách truyền vào đối tượng cấu hình.
+; .then(response => response.json()) dùng để xử lý phản hồi từ máy chủ trả về dưới dạng JSON. 
+; Nếu phản hồi trả về không phải là JSON, ta có thể sử dụng các phương thức khác như text(), blob(), 
+; formData(), arrayBuffer() để xử lý phản hồi.
+; .then(data => console.log(data)) dùng để xử lý dữ liệu trả về. Trong ví dụ trên, dữ liệu trả về sẽ được in ra console.
+; .catch(error => console.error(error)) dùng để xử lý lỗi nếu có.
+; Để thêm các tùy chọn cấu hình, ta có thể truyền vào một đối tượng cấu hình với các thuộc tính như method, headers, body, 
+; mode, cache, credentials, redirect, referrer, referrerPolicy, integrity, keepalive, signal.
+
+; fetch(url, {
+;   method: 'POST',
+;   headers: {
+;     'Content-Type': 'application/json'
+;   },
+;   body: JSON.stringify(data)
+; })
+; .then(response => response.json())
+; .then(data => console.log(data))
+; .catch(error => console.error(error))
+
+; Trong đó, ta đã cấu hình phương thức là POST và truyền dữ liệu lên máy chủ dưới dạng JSON bằng thuộc tính body.

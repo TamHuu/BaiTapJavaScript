@@ -1,0 +1,59 @@
+Redux Thunk là một middleware cho Redux, cho phép bạn viết các hàm action creators trả về một hàm thay vì một action đơn giản.
+ Hàm được trả về có thể thực hiện các tác vụ bất đồng bộ, như gửi các yêu cầu AJAX, và dispatch một hoặc nhiều actions khác khi hoàn thành 
+ tác vụ bất đồng bộ đó.
+
+Các hàm action creators trả về một hàm thunk, được thực thi bởi middleware Redux Thunk. 
+Middleware này sẽ xử lý các hàm thunk trước khi chúng được gửi đến reducer, cho phép các tác vụ bất đồng bộ có thể được thực hiện.
+
+Ví dụ, để thực hiện một yêu cầu AJAX để lấy dữ liệu từ server, bạn có thể sử dụng Redux Thunk như sau:
+
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+export const fetchPosts = createAsyncThunk(
+  'posts/fetchPosts',
+  async () => {
+    const response = await axios.get('/api/posts');
+    return response.data;
+  }
+);
+
+Hàm createAsyncThunk sẽ trả về một hàm thunk, trong đó chúng ta sử dụng axios để gửi yêu cầu AJAX đến địa chỉ '/api/posts'. 
+Khi tác vụ bất đồng bộ hoàn thành, hàm thunk sẽ dispatch một action với dữ liệu trả về từ server.
+
+Trong reducer, chúng ta có thể xử lý các actions này như bình thường:
+
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchPosts } from './postsActions';
+
+const initialState = {
+  posts: [],
+  status: 'idle',
+  error: null
+};
+
+const postsSlice = createSlice({
+  name: 'posts',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchPosts.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchPosts.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.posts = action.payload;
+      })
+      .addCase(fetchPosts.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      });
+  }
+});
+
+export default postsSlice.reducer;
+Trong reducer, chúng ta sử dụng extraReducers để xử lý các actions trả về từ hàm thunk fetchPosts.
+ Ví dụ, khi fetchPosts.pending được gọi, trạng thái của ứng dụng sẽ được cập nhật thành 'loading'.
+ Khi fetchPosts.fulfilled được gọi, dữ liệu trả về từ server sẽ được lưu trữ trong trạng thái của ứng dụng.
+ 

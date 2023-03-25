@@ -1,0 +1,34 @@
+Trong JavaScript, sự kiện là một hành động hoặc trạng thái được kích hoạt bởi người dùng hoặc hệ thống,
+ ví dụ như click chuột, nhập liệu vào ô input, hoặc khi trang web được load. 
+Xử lý sự kiện là quá trình gắn các hàm hoặc phương thức vào một sự kiện để thực hiện các hành động cụ thể khi sự kiện được kích hoạt.
+
+Các bước để xử lý sự kiện trong JavaScript như sau:
+
+1/Chọn phần tử HTML bạn muốn thêm sự kiện và tạo một tham chiếu đến nó bằng cách sử dụng phương thức document.getElementById()
+ hoặc document.querySelector().
+
+2/Sử dụng phương thức addEventListener() để đăng ký một hàm hoặc phương thức xử lý sự kiện với phần tử đã chọn. 
+Ví dụ, để thêm một hàm xử lý sự kiện click chuột vào một nút HTML,bạn có thể sử dụng đoạn mã sau:
+
+const button = document.getElementById('my-button');
+
+button.addEventListener('click', function() {
+  // Thực hiện các hành động cụ thể khi nút được click
+});
+
+
+3/Khi sự kiện được kích hoạt, hàm xử lý sự kiện được đăng ký sẽ được thực thi. Bên trong hàm này, 
+bạn có thể truy cập các thuộc tính của sự kiện như event.target (phần tử HTML đã kích hoạt sự kiện) 
+hoặc event.type (loại sự kiện) và thực hiện các hành động cụ thể.
+
+const button = document.getElementById('my-button');
+
+button.addEventListener('click', function(event) {
+  event.preventDefault(); // Ngăn chặn hành động mặc định của sự kiện
+  console.log('Button clicked!');
+});
+
+Trong đoạn mã trên, event.preventDefault() được sử dụng để ngăn chặn hành động 
+mặc định của sự kiện (ví dụ như điều hướng đến một trang mới khi click 
+vào một liên kết). 
+Sau đó, một thông báo được hiển thị trong console log khi nút được click.

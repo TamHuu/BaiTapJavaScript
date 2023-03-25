@@ -1,0 +1,71 @@
+<!-- 1/Thêm
+Để thêm và xóa các phần tử trong danh sách, chúng ta có thể sử dụng state của React để lưu trữ danh sách và cập nhật nó khi người dùng thực hiện các thao tác thêm hoặc xóa.
+ Dưới đây là ví dụ về cách thêm và xóa một phần tử từ danh sách sử dụng useState hook:
+
+ import React, { useState } from 'react';
+
+function App() {
+  const [items, setItems] = useState([]);
+
+  function addItem() {
+    setItems([...items, { id: items.length, text: 'New Item' }]);
+  }
+
+  function removeItem(id) {
+    const updatedItems = items.filter(item => item.id !== id);
+    setItems(updatedItems);
+  }
+
+  return (
+    <div>
+      <button onClick={addItem}>Add Item</button>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            {item.text} <button onClick={() => removeItem(item.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+Trong ví dụ trên, chúng ta sử dụng useState hook để khởi tạo state cho danh sách các phần tử.
+ Hàm addItem được gọi khi người dùng click vào nút "Add Item", và nó sẽ thêm một phần tử mới vào danh sách. 
+ Hàm removeItem được gọi khi người dùng click vào nút "Delete" trên mỗi phần tử, và nó sẽ xóa phần tử đó khỏi danh sách.
+ 
+2/Sửa
+
+Để sửa một phần tử trong danh sách, chúng ta cần cập nhật giá trị của phần tử đó trong state khi
+ người dùng thực hiện các thao tác chỉnh sửa.
+ Dưới đây là một ví dụ về cách sửa một phần tử trong danh sách:
+
+ import React, { useState } from 'react';
+
+function App() {
+  const [items, setItems] = useState([
+    { id: 1, text: 'Item 1' },
+    { id: 2, text: 'Item 2' },
+    { id: 3, text: 'Item 3' }
+  ]);
+
+  function editItem(id, newText) {
+    const updatedItems = items.map(item => {
+      if (item.id === id) {
+        return { ...item, text: newText };
+      } else {
+        return item;
+      }
+    });
+    setItems(updatedItems);
+  }
+
+  return (
+    <div>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            {item.text} <button onClick={() => editItem(item.id, 'New Text')}>Edit</button>
+          </ -->

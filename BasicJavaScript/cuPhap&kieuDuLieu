@@ -1,0 +1,21 @@
+Cú pháp là các quy tắc cú pháp mà một chương trình JavaScript phải tuân theo. Kiểu dữ liệu xác định loại giá trị mà một biến có thể chứa.
+
+Cú pháp:
+
+Khai báo biến: var, let, const
+Định nghĩa hàm: function
+Điều kiện: if, else if, else
+Vòng lặp: for, while, do...while
+Switch case: switch, case, default
+Cấu trúc try-catch: try, catch, finally
+Toán tử: +, -, *, /, %, =, ==, ===, !=, !==, <, >, <=, >=, &&, ||, !, ? :, +=, -=, *=, /=, %=, ++, --, typeof, instanceof, vv.
+
+Kiểu dữ liệu:
+
+number: số, bao gồm số nguyên và số thực.
+string: chuỗi ký tự.
+boolean: giá trị đúng hoặc sai.
+null: giá trị rỗng.
+undefined: giá trị chưa được định nghĩa.
+object: đối tượng.
+symbol: ký hiệu.

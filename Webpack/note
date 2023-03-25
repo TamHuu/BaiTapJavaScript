@@ -1,0 +1,54 @@
+Webpack là một công cụ xây dựng (build tool) cho JavaScript và các tài nguyên khác như CSS, hình ảnh, font, ... 
+Nó cho phép các lập trình viên xây dựng ứng dụng web phức tạp và hiệu quả hơn bằng cách tự động hóa quá trình đóng gói (packing) các tập tin JavaScript
+ và tài nguyên khác thành các file đơn giản hơn để triển khai (deployment) trên môi trường sản xuất (production).
+
+Webpack sử dụng các module (đoạn mã JavaScript được đóng gói thành các tập tin riêng biệt) và các loader để xử lý các tập tin khác nhau. 
+Các loader được sử dụng để biến đổi các tài nguyên như CSS, SASS, và các tệp ảnh thành mã JavaScript có thể được sử dụng trong các ứng dụng web.
+
+Cách sử dụng Webpack:
+
+1/Cài đặt Webpack bằng npm:
+
+npm install webpack webpack-cli --save-dev
+
+2/Tạo file webpack.config.js trong thư mục gốc của dự án để cấu hình Webpack. Ví dụ:
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
+};
+
+Trong đoạn mã này, entry là tập tin gốc (ví dụ index.js) của ứng dụng và output là thư mục đầu ra cho các tập tin được xây dựng 
+(ví dụ thư mục dist với file main.js). Module là nơi cấu hình các loader để xử lý các tệp tin khác nhau.
+ Các loader được cấu hình bằng các object rules, 
+với mỗi object đại diện cho một loader và có các thuộc tính như test để xác định loại tệp tin cần được xử lý,
+ exclude để loại bỏ các thư mục không cần xử lý và use để chỉ định các loader cần được sử dụng.
+
+ 3/Chạy Webpack để xây dựng ứng dụng:
+ Trong ví dụ trên, khi chạy lệnh này, Webpack sẽ tìm file entry (index.js),
+  đóng gói các module và tài nguyên khác trong file đầu ra (main.js) trong thư mục dist.
+
+Webpack có thể được cấu hình để sử dụng các plugin và tối

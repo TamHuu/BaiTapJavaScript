@@ -1,0 +1,30 @@
+Để sắp xếp một danh sách trong React JS, bạn có thể sử dụng phương thức .sort() của JavaScript.
+
+Ví dụ: Giả sử bạn có một danh sách các sản phẩm và bạn muốn sắp xếp theo giá từ thấp đến cao. Bạn có thể thực hiện như sau:
+
+1/Tạo một state để lưu trữ danh sách sản phẩm:
+
+const [products, setProducts] = useState([
+  { id: 1, name: "Áo thun nam", price: 100000 },
+  { id: 2, name: "Áo sơ mi nam", price: 200000 },
+  { id: 3, name: "Quần jean nam", price: 300000 },
+]);
+
+2/Tạo một hàm xử lý sự kiện khi người dùng bấm vào nút sắp xếp:
+const handleSort = () => {
+  const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+  setProducts(sortedProducts);
+};
+
+Trong đoạn mã trên, chúng ta tạo một bản sao của danh sách sản phẩm sử dụng toán tử spread .... Sau đó,
+ chúng ta sử dụng phương thức .sort() để sắp xếp danh sách sản phẩm theo giá từ thấp đến cao,
+  sử dụng hàm so sánh truyền vào (a, b) => a.price - b.price. 
+Cuối cùng, chúng ta cập nhật danh sách sản phẩm mới đã sắp xếp bằng cách gọi setProducts().
+3/Hiển thị danh sách sản phẩm đã sắp xếp
+
+{products.map((product) => (
+  <div key={product.id}>
+    <p>{product.name}</p>
+    <p>{product.price}</p>
+  </div>
+))}

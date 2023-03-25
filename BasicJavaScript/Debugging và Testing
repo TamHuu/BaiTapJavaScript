@@ -1,0 +1,22 @@
+1/Console: 
+Bạn có thể sử dụng console để in ra các giá trị biến, thông báo lỗi, cảnh báo, đếm thời gian và thậm chí là chạy các đoạn mã JavaScript tạm thời.
+
+2/Chrome DevTools:
+ DevTools là một bộ công cụ phát triển của trình duyệt Chrome, cung cấp cho bạn nhiều tính năng hữu ích như gỡ lỗi JavaScript, 
+ phân tích và tối ưu hóa CSS và DOM, đo lường thời gian tải trang và nhiều hơn nữa.
+
+3/Firefox Developer Tools:
+ Firefox cũng cung cấp một bộ công cụ phát triển tương tự như Chrome DevTools, cung cấp các tính năng gỡ lỗi, 
+ phân tích và tối ưu hóa cho các ứng dụng web.
+
+4/Visual Studio Code: 
+Đây là một trình biên tập mã nguồn mã mở được phát triển bởi Microsoft. 
+Visual Studio Code cung cấp tính năng gỡ lỗi tích hợp và cho phép bạn khám phá, chỉnh sửa và tìm kiếm các tệp mã nguồn.
+
+5/Jest: 
+Jest là một bộ thư viện kiểm tra JavaScript được phát triển bởi Facebook.
+ Jest cung cấp cho bạn một cách tiện lợi để viết và chạy các bài kiểm tra đơn vị cho các ứng dụng React và Node.js.
+
+6/Cypress:
+Cypress là một công cụ kiểm thử kết hợp với JavaScript.
+ Cypress cho phép bạn viết và chạy các kiểm thử chức năng và tự động hóa trình duyệt để kiểm tra các tính năng của ứng dụng web.

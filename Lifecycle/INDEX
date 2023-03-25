@@ -1,0 +1,24 @@
+React có một số vòng đời (lifecycle) quan trọng trong quá trình hoạt động của một component. 
+Các vòng đời này được sử dụng để đảm bảo rằng các component được khởi tạo, cập nhật và xóa một cách đúng đắn. 
+Cụ thể, các vòng đời của React bao gồm:
+
+1/Initialization:
+
+ Khi một component được tạo, React sẽ gọi hàm constructor để khởi tạo state và các giá trị khác cho component.
+
+2/Mounting:
+
+ Sau khi khởi tạo, React sẽ gọi hàm componentWillMount() trước khi component được hiển thị lần đầu tiên trên trang.
+  Sau đó, React sẽ gọi hàm render() để render component lên trang và gọi hàm componentDidMount() sau khi component được hiển thị.
+
+3/Updating: 
+
+Khi state hoặc props của component thay đổi, React sẽ gọi hàm componentWillReceiveProps() để chuẩn bị cho việc cập nhật.
+ Sau đó, React sẽ gọi hàm shouldComponentUpdate() để xác định liệu component có cần được cập nhật hay không. 
+ Nếu cần, React sẽ gọi hàm componentWillUpdate() trước khi cập nhật component và sau đó gọi hàm render() để render component với dữ liệu mới. 
+ Cuối cùng, React sẽ gọi hàm componentDidUpdate() sau khi component được cập nhật.
+
+4/Unmounting: Khi component bị xóa khỏi trang, React sẽ gọi hàm componentWillUnmount() để chuẩn bị cho việc xóa component.
+
+Ngoài ra, React còn có một số lifecycle methods khác như componentDidCatch() để xử lý các lỗi xảy ra trong component hoặc getDerivedStateFromProps()
+ để cập nhật state dựa trên props mới.

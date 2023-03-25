@@ -1,0 +1,22 @@
+Khi học React JS, bạn nên nắm vững các kiến thức sau:
+
+1/JSX: Là một phần quan trọng trong React, JSX là một cú pháp giúp tạo ra các component dễ dàng hơn bằng cách kết hợp HTML và JavaScript.
+
+2/Components: Đây là các phần tử đơn giản mà bạn có thể sử dụng để tạo ra giao diện cho ứng dụng của mình. 
+Các component có thể chứa state, props, và phương thức, giúp bạn xây dựng ứng dụng phức tạp.
+
+3/State và Props: State được sử dụng để lưu trữ các giá trị và props được sử dụng để truyền các giá trị giữa các component.
+
+4/Lifecycle methods: React cung cấp một loạt các phương thức mà bạn có thể sử dụng để thực hiện các hành động khác nhau trong 
+suốt quá trình render component.
+
+5/Event handling: React cho phép bạn xử lý các sự kiện như onClick hoặc onSubmit trong các component của mình.
+
+6/React Router: React Router là một thư viện giúp bạn quản lý các route trong ứng dụng của mình.
+
+7/Redux: Redux là một thư viện quản lý state cho ứng dụng của bạn. Nó giúp bạn quản lý state của ứng dụng một cách dễ dàng và hiệu quả.
+
+8/Thư viện UI: React cung cấp nhiều thư viện UI, chẳng hạn như Material UI hoặc Ant Design,
+ giúp bạn tạo ra các giao diện đẹp và chuyên nghiệp cho ứng dụng của mình.
+
+Ngoài ra, bạn cũng nên hiểu và sử dụng các công cụ liên quan như npm hoặc yarn, webpack, babel, và các công cụ kiểm tra lỗi như ESLint.

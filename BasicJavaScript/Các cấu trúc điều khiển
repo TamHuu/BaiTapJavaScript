@@ -1,0 +1,45 @@
+// 1. Câu lệnh if:
+
+// Câu lệnh if được sử dụng để thực thi một khối lệnh nếu điều kiện được xác định là đúng.
+
+// ví dụ:
+
+// let age = 18;
+// if (age >= 18) {
+//   console.log("You are an adult");
+// } else {
+//   console.log("You are not an adult yet");
+// }
+
+// 2. Câu lệnh switch:
+// Câu lệnh switch được sử dụng để kiểm tra nhiều giá trị khác nhau của một biểu thức và thực thi khối lệnh tương ứng với giá trị đó.
+
+// let day = "Monday";
+// switch (day) {
+//   case "Monday":
+//     console.log("Today is Monday");
+//     break;
+//   case "Tuesday":
+//     console.log("Today is Tuesday");
+//     break;
+//   case "Wednesday":
+//     console.log("Today is Wednesday");
+//     break;
+//   default:
+//     console.log("Today is some other day");
+// }
+// 3. Vòng lặp for:
+
+// Vòng lặp for được sử dụng để thực hiện một khối lệnh nhiều lần, với một biến được sử dụng để điều khiển số lần lặp.
+
+// for (let i = 0; i < 5; i++) {
+//     console.log(i);
+//   }
+//   4/Vòng lặp while:
+//   Vòng lặp while được sử dụng để thực hiện một khối lệnh nhiều lần, với một điều kiện được xác định để kiểm tra xem vòng lặp có tiếp tục hay không.
+
+//   let i = 0;
+// while (i < 5) {
+//   console.log(i);
+//   i++;
+// }

@@ -1,0 +1,88 @@
+Trong JavaScript, đối tượng và lớp được sử dụng để mô tả các đối tượng thực tế.
+ Một đối tượng là một thực thể có thuộc tính và phương thức, và được tạo ra từ một lớp.
+
+Một đối tượng có thể được tạo bằng cách sử dụng từ khóa new và gọi một hàm tạo, cũng được gọi là một lớp. 
+Hàm tạo thường có tên bắt đầu bằng chữ hoa để phân biệt với các hàm bình thường.
+
+Cú pháp để tạo một lớp và đối tượng như sau:
+
+// Tạo lớp
+class TenLop {
+  // Các thuộc tính và phương thức
+}
+
+// Tạo đối tượng từ lớp
+let tenDoiTuong = new TenLop();
+
+Một đối tượng có thể có các thuộc tính và phương thức.
+ Thuộc tính là các biến được lưu trữ trên đối tượng và phương thức là các hàm được gắn liền với đối tượng.
+
+Cú pháp để tạo một đối tượng với thuộc tính và phương thức như sau:
+
+// Tạo đối tượng với thuộc tính và phương thức
+let tenDoiTuong = {
+  thuocTinh1: giaTri1,
+  thuocTinh2: giaTri2,
+  phuongThuc1: function() {
+    // Khối lệnh được thực thi khi gọi phương thức
+  },
+  phuongThuc2: function() {
+    // Khối lệnh được thực thi khi gọi phương thức
+  },
+};
+
+2 / 2
+
+Trong JavaScript, đối tượng và lớp được sử dụng để mô tả các đối tượng thực tế. Một đối tượng là một thực thể có thuộc tính và phương thức,
+ và được tạo ra từ một lớp.
+
+Một đối tượng có thể được tạo bằng cách sử dụng từ khóa new và gọi một hàm tạo, cũng được gọi là một lớp.
+ Hàm tạo thường có tên bắt đầu bằng chữ hoa để phân biệt với các hàm bình thường.
+
+Cú pháp để tạo một lớp và đối tượng như sau:
+
+javascript
+Copy code
+// Tạo lớp
+class TenLop {
+  // Các thuộc tính và phương thức
+}
+
+// Tạo đối tượng từ lớp
+let tenDoiTuong = new TenLop();
+Một đối tượng có thể có các thuộc tính và phương thức. Thuộc tính là các biến được lưu trữ trên đối tượng và phương thức
+ là các hàm được gắn liền với đối tượng.
+
+Cú pháp để tạo một đối tượng với thuộc tính và phương thức như sau:
+
+javascript
+Copy code
+// Tạo đối tượng với thuộc tính và phương thức
+let tenDoiTuong = {
+  thuocTinh1: giaTri1,
+  thuocTinh2: giaTri2,
+  phuongThuc1: function() {
+    // Khối lệnh được thực thi khi gọi phương thức
+  },
+  phuongThuc2: function() {
+    // Khối lệnh được thực thi khi gọi phương thức
+  },
+};
+Một đối tượng cũng có thể được tạo bằng cách sử dụng hàm tạo và từ khóa this để tham chiếu đến các thuộc tính của đối tượng được tạo.
+
+// Tạo lớp với hàm tạo và phương thức
+class HinhChuNhat {
+  constructor(chieuDai, chieuRong) {
+    this.chieuDai = chieuDai;
+    this.chieuRong = chieuRong;
+  }
+
+  tinhDienTich() {
+    return this.chieuDai * this.chieuRong;
+  }
+}
+
+// Tạo đối tượng từ lớp và gọi phương thức
+let hcn = new HinhChuNhat(4, 5);
+let dienTich = hcn.tinhDienTich();
+console.log(dienTich); // In ra 20

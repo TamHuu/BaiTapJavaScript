@@ -1,0 +1,24 @@
+Hook useEffect trong React được sử dụng để thực hiện các tác vụ liên quan đến lifecycle của component, 
+chẳng hạn như fetch dữ liệu từ API, tạo event listener, thay đổi title trang, hoặc làm sạch tài nguyên không cần thiết.
+
+Dưới đây là một số trường hợp nên sử dụng useEffect:
+
+1/Fetch dữ liệu từ API: useEffect có thể được sử dụng để fetch dữ liệu từ API trong component.
+ Nó có thể được gọi một lần khi component được mount, hoặc khi các props của component thay đổi.
+
+2/Tạo và xóa event listener: useEffect có thể được sử dụng để tạo và xóa event listener,
+giúp component lắng nghe các sự kiện như click, scroll, hoặc resize.
+
+3/Thay đổi title trang: useEffect có thể được sử dụng để thay đổi title của trang web, 
+giúp cung cấp thông tin cho người dùng về trạng thái hiện tại của component.
+
+4/Tương tác với DOM: useEffect có thể được sử dụng để tương tác với DOM, giúp thay đổi giao diện của component.
+
+5/Làm sạch tài nguyên không cần thiết: useEffect có thể được sử dụng để làm sạch tài nguyên không cần thiết, 
+chẳng hạn như clear interval hoặc timeout, hoặc xóa các listeners.
+
+Lưu ý rằng, khi sử dụng useEffect, bạn cần tránh việc gây ra hiệu ứng phụ không mong muốn,
+ chẳng hạn như gây ra việc fetch dữ liệu quá nhiều lần hoặc làm cho component re-render quá nhiều lần.
+ Bạn cũng cần cẩn thận với việc quản lý memory leak trong component.
+
+ 

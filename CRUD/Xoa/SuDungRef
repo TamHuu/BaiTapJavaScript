@@ -1,0 +1,25 @@
+// import { useState, useRef } from 'react';
+
+// const DeleteItem = () => {
+//   const [items, setItems] = useState(['Item 1', 'Item 2']);
+//   const inputRef = useRef(null);
+
+//   const handleDelete = () => {
+//     const itemToDelete = inputRef.current.value;
+//     const newItems = items.filter(item => item !== itemToDelete);
+//     setItems(newItems);
+//     inputRef.current.value = '';
+//   };
+
+//   return (
+//     <div>
+//       <input type="text" ref={inputRef} />
+//       <button onClick={handleDelete}>Delete Item</button>
+//       <ul>
+//         {items.map(item => (
+//           <li key={item}>{item}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };

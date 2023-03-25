@@ -1,0 +1,37 @@
+# Babel là một công cụ biên dịch (transpiler) cho JavaScript. Nó cho phép các lập trình viên sử dụng các tính năng mới nhất của ngôn ngữ JavaScript
+# và biên dịch mã nguồn của họ thành các phiên bản tương thích với các trình duyệt và môi trường chạy JavaScript cũ hơn.
+
+# Babel có thể biên dịch các tính năng mới như các hàm arrow, template literals, destructuring, và async/await thành các phiên bản tương thích
+# với các trình duyệt và môi trường chạy JavaScript cũ hơn. Nó cũng hỗ trợ các plugin để biên dịch các tính năng tùy chỉnh hoặc thay thế các
+#  tính năng có sẵn.
+
+# Cách sử dụng Babel:
+
+# 1/Cài đặt Babel bằng npm:
+
+# npm install @babel/core @babel/cli --save-dev
+
+#  2/Cài đặt các plugin và preset cho Babel:
+
+#  npm install @babel/preset-env --save-dev
+
+#  3/Tạo file .babelrc trong thư mục gốc của dự án để cấu hình Babel. Ví dụ:
+
+#  {
+#   "presets": ["@babel/preset-env"]
+# }
+
+# Trong đoạn mã này, chúng ta chỉ định sử dụng preset-env để biên dịch các tính năng mới nhất của ngôn ngữ JavaScript thành các
+# phiên bản tương thích với các trình duyệt và
+# môi trường chạy JavaScript cũ hơn.
+
+# 4/Biên dịch mã nguồn của bạn bằng lệnh Babel:
+
+# npx babel src --out-dir lib
+
+# Trong ví dụ trên, chúng ta biên dịch mã nguồn của mình từ thư mục src sang thư mục lib bằng cách sử dụng Babel.
+# Khi chạy lệnh này, Babel sẽ biên dịch các tính năng mới nhất của ngôn ngữ JavaScript thành các phiên bản tương thích với các trình duyệt
+# và môi trường chạy JavaScript cũ hơn và lưu chúng vào thư mục lib.
+
+# Babel cũng có thể được sử dụng với các công cụ xây dựng khác như Webpack để biên dịch mã nguồn của bạn trong quá trình xây dựng ứng dụng của bạn.
+

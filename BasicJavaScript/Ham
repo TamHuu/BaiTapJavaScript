@@ -1,0 +1,37 @@
+// Trong JavaScript, hàm là một khối mã được định nghĩa một lần và có thể được sử dụng nhiều lần trong chương trình.
+//  Hàm là một cách để đóng gói một tập hợp các lệnh và thực hiện một số công việc cụ thể.
+
+// Một hàm có thể có một hoặc nhiều tham số đầu vào, và có thể trả về giá trị hoặc không. 
+// Hàm có thể được gọi ở bất kỳ đâu trong chương trình và có thể được sử dụng để thực hiện các tác vụ phức tạp hoặc được sử dụng nhiều lần.
+
+
+// 1/Để tạo một hàm mới, sử dụng cú pháp sau:
+
+// function tenHam(thamSo1, thamSo2, ...) {
+//   // Thân hàm
+// }
+// Trong đó, tenHam là tên của hàm, thamSo1, thamSo2,... là các tham số mà hàm có thể nhận vào. Thân hàm được đặt trong cặp ngoặc nhọn {}
+// và được thực hiện khi hàm được gọi.
+
+// 2/Để gọi một hàm, sử dụng cú pháp sau:
+
+// tenHam(thamSo1, thamSo2, ...);
+
+// Trong đó, tenHam là tên của hàm cần gọi, thamSo1, thamSo2,... là các tham số mà hàm có thể nhận vào.
+
+// 3/Để truyền tham số cho một hàm, chỉ cần đưa giá trị của các tham số vào trong cặp ngoặc đơn () khi gọi hàm. Ví dụ:
+
+// function tinhTong(a, b) {
+//     return a + b;
+//   }
+
+//   var tong = tinhTong(3, 4); // tong sẽ có giá trị 7
+// 4/Để trả về giá trị của một hàm, sử dụng từ khóa return. Ví dụ:
+
+// function tinhTong(a, b) {
+//     return a + b;
+//   }
+
+//   var tong = tinhTong(3, 4); // tong sẽ có giá trị 7
+//   Trong ví dụ này, hàm tinhTong trả về giá trị của phép tính a + b
+//   bằng cách sử dụng từ khóa return. Giá trị này được lưu trữ vào biến tong khi hàm được gọi.

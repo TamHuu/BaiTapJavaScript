@@ -1,0 +1,21 @@
+Trong ReactJS, có nhiều loại tìm kiếm khác nhau mà bạn có thể sử dụng trong ứng dụng của mình, 
+tùy thuộc vào yêu cầu cụ thể của ứng dụng. Dưới đây là một số loại tìm kiếm phổ biến trong ReactJS:
+
+1/Tìm kiếm đơn giản: Đây là loại tìm kiếm cơ bản nhất,
+ cho phép người dùng nhập từ khóa vào ô tìm kiếm và hiển thị kết quả phù hợp. Để thực hiện tìm kiếm đơn giản, 
+ bạn có thể sử dụng hàm filter để lọc ra các phần tử phù hợp với từ khóa tìm kiếm.
+
+2/Tìm kiếm theo danh mục: Loại tìm kiếm này cho phép người dùng lọc kết quả theo danh mục. 
+Để thực hiện tìm kiếm theo danh mục, bạn có thể sử dụng dropdown hoặc checkbox để cho phép người dùng chọn danh mục, 
+sau đó sử dụng hàm filter để lọc các phần tử phù hợp với danh mục đã chọn.
+
+3/Tìm kiếm theo khoảng giá: Loại tìm kiếm này cho phép người dùng lọc kết quả theo khoảng giá.
+ Để thực hiện tìm kiếm theo khoảng giá, bạn có thể sử dụng thanh trượt hoặc hai ô nhập để cho phép người dùng chọn khoảng giá, 
+ sau đó sử dụng hàm filter để lọc các phần tử phù hợp với khoảng giá đã chọn.
+
+4/Tìm kiếm theo vị trí địa lý: Loại tìm kiếm này cho phép người dùng tìm kiếm các đối tượng dựa trên vị trí địa lý của họ. 
+Để thực hiện tìm kiếm theo vị trí địa lý, bạn có thể sử dụng thư viện Geolib để tính toán khoảng cách giữa vị trí của người dùng 
+và các đối tượng, sau đó sử dụng hàm filter để lọc các đối tượng phù hợp.
+
+5/Tìm kiếm theo đặc tính của sản phẩm: Loại tìm kiếm này cho phép người dùng tìm kiếm các sản phẩm dựa trên 
+các đặc tính của chúng, chẳng hạn như kích thước, màu sắc, chất liệu và nhiều hơn nữa. Để thực hiện tìm kiếm theo đặc tính

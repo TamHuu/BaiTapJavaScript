@@ -1,0 +1,42 @@
+AJAX (Asynchronous JavaScript and XML) là một kỹ thuật cho phép trang web tương tác với máy chủ mà không cần phải tải lại trang.
+ Các yêu cầu AJAX có thể được gửi và nhận dữ liệu bất đồng bộ, do đó trang web có thể tiếp tục hoạt động mà không cần chờ đợi phản hồi từ máy chủ.
+
+Để sử dụng AJAX trong JavaScript, ta có thể sử dụng đối tượng XMLHttpRequest (hay XHR) để gửi yêu cầu và nhận phản hồi từ máy chủ. 
+Ví dụ:
+
+const xhr = new XMLHttpRequest();
+xhr.open('GET', '/api/data');
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    console.log(xhr.responseText);
+  } else {
+    console.log('Error!');
+  }
+};
+xhr.send();
+
+Trong đoạn mã trên, ta tạo một đối tượng XMLHttpRequest và mở một kết nối đến địa chỉ /api/data bằng phương thức GET. 
+Khi phản hồi từ máy chủ trả về, ta kiểm tra mã trạng thái của phản hồi (xhr.status) và log nội dung của phản hồi (xhr.responseText).
+
+Ngoài AJAX, ta cũng có thể sử dụng Fetch API để xử lý các yêu cầu HTTP. 
+Fetch API cung cấp một cách đơn giản hơn để gửi yêu cầu và xử lý phản hồi bằng cách trả về một Promise. 
+Ví dụ:
+
+fetch('/api/data')
+  .then(response => {
+    if (response.ok) {
+      return response.text();
+    } else {
+      throw new Error('Error!');
+    }
+  })
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+
+Trong đoạn mã trên, ta gọi phương thức fetch để gửi yêu cầu GET đến địa chỉ /api/data.
+Phương thức fetch trả về một Promise, ta sử dụng các phương thức then và catch để xử lý phản hồi từ máy chủ.
+ Nếu phản hồi trả về thành công (response.ok bằng true), ta trả về nội dung của phản hồi (response.text()), ngược lại ta ném ra một lỗi. 
+Cuối cùng, ta log nội dung hoặc lỗi bằng cách sử dụng các phương thức then và catch
+
+
+//Fetch

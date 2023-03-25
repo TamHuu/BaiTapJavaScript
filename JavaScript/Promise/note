@@ -1,0 +1,27 @@
+; Promise là một cơ chế trong JavaScript để xử lý các hoạt động bất đồng bộ (asynchronous operations).
+;  Nó được sử dụng để thực hiện các tác vụ có thể mất nhiều thời gian để hoàn thành, chẳng hạn như tải dữ liệu 
+;  từ máy chủ hoặc đọc tập tin.
+
+; Promise là một đối tượng bao gồm các trạng thái
+; + Pending (đang chờ): Khi một Promise được tạo ra, nó ở trạng thái chờ và chưa hoàn thành.
+; + Fulfilled (đã hoàn thành): Khi Promise kết thúc thành công, nó sẽ chuyển sang trạng thái đã hoàn thành và trả về một giá trị.
+; + Rejected (bị từ chối): Khi Promise thất bại, nó sẽ chuyển sang trạng thái bị từ chối và trả về một lỗi.
+
+; Cách sử dụng Promise:
+
+; 1/Tạo một Promise
+; Để tạo một Promise, sử dụng cú pháp sau:
+; const myPromise = new Promise((resolve, reject) => {
+;   // thực hiện các tác vụ bất đồng bộ, nếu thành công gọi resolve(), nếu thất bại gọi reject()
+; });
+
+; Trong đó, resolve và reject là các hàm được truyền vào Promise để xử lý kết quả khi Promise kết thúc.
+
+; 2/ Sử dụng then() và catch()
+; Khi một Promise đã được tạo ra, ta có thể sử dụng phương thức then() để xử lý kết quả trả về khi Promise được hoàn thành:
+
+; myPromise.then((result) => {
+;   // xử lý kết quả thành công
+; }).catch((error) => {
+;   // xử lý lỗi
+; });

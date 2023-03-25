@@ -1,0 +1,27 @@
+Hook useContext trong React được sử dụng để truyền các giá trị hoặc hàm từ component 
+cha xuống các component con mà không cần sử dụng các props qua lại liên tục.
+
+Dưới đây là một số trường hợp nên sử dụng useContext:
+
+1/Truyền thông tin chung:
+
+ Khi các component con cần truy cập thông tin chung, 
+bạn có thể sử dụng useContext để truyền giá trị đó từ component cha xuống các component con.
+ Ví dụ như thông tin ngôn ngữ, chủ đề, tài khoản người dùng, ...
+
+2/Truyền hàm xử lý sự kiện:
+
+ Khi các component con cần sử dụng hàm xử lý sự kiện được định nghĩa ở component cha, 
+bạn có thể sử dụng useContext để truyền hàm đó xuống các component con.
+
+3/Truyền các state hoặc actions của Redux store: 
+Khi sử dụng thư viện quản lý trạng thái Redux, 
+bạn có thể sử dụng useContext để truyền các state hoặc actions của Redux store xuống các component con mà không cần sử dụng các props qua lại liên tục.
+
+4/Truyền các utility hoặc helper function: 
+Khi bạn cần sử dụng các utility hoặc helper function ở nhiều nơi trong ứng dụng,
+ bạn có thể sử dụng useContext để truyền chúng từ component cha xuống các component con.
+
+Lưu ý rằng, khi sử dụng useContext, bạn nên đảm bảo rằng các giá trị hoặc hàm được truyền xuống các component con phù hợp và đủ nhất 
+để giải quyết vấn đề. Nếu có quá nhiều giá trị hoặc hàm cần được truyền xuống, hoặc các giá trị hoặc hàm được sử dụng không phải
+ là thông tin chung, bạn nên sử dụng các props hoặc thư viện quản lý trạng thái để giải quyết vấn đề đó.

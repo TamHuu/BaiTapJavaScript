@@ -2,7 +2,8 @@ Optional chaining là một tính năng mới trong ES2020 của JavaScript, cho
  của một đối tượng một cách an toàn, tránh gây lỗi khi một thuộc tính không tồn tại hoặc là null/undefined.
 
 Cú pháp của optional chaining là "?." và được sử dụng sau một đối tượng để truy cập thuộc tính của nó. 
-Nếu thuộc tính đó không tồn tại hoặc là null/undefined, thì kết quả trả về sẽ là undefined thay vì gây ra lỗi như khi sử dụng dấu chấm "." truy cập thuộc tính.
+Nếu thuộc tính đó không tồn tại hoặc là null/undefined, thì kết quả trả về sẽ là undefined thay vì gây ra
+ lỗi như khi sử dụng dấu chấm "." truy cập thuộc tính.
 
 Ví dụ:
 

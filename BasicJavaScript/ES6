@@ -1,0 +1,60 @@
+ES6 (ECMAScript 2015) là một phiên bản mới của ngôn ngữ lập trình JavaScript, với nhiều tính năng mới và cải tiến so với các phiên bản trước đó. 
+Dưới đây là một số ví dụ về cách sử dụng các tính năng mới trong ES6:
+
+1/Let và const: 
+
+Thay vì sử dụng var để khai báo biến, ta có thể sử dụng let và const.
+ Sự khác biệt giữa let và const là biến được khai báo bằng let có thể thay đổi giá trị,
+ trong khi biến được khai báo bằng const không thể thay đổi giá trị.
+
+ let x = 10;
+const y = 20;
+x = 5;
+// y = 15; // Lỗi - không thể thay đổi giá trị của biến const
+
+2/Arrow function:
+
+ Arrow function là một cách viết hàm ngắn gọn và dễ đọc hơn. Nó cho phép truyền đối số, giá trị trả về, và không cần dùng từ khóa return.
+
+ // Hàm thông thường
+function sum(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const sum = (a, b) => a + b;
+
+3/Template literals: Template literals cho phép nhúng biểu thức vào trong chuỗi bằng cách sử dụng cú pháp ${expression}.
+
+const name = 'John';
+console.log(`Hello, ${name}!`);
+
+4/Spread operator:
+
+ Spread operator cho phép tách các phần tử trong một mảng hoặc các thuộc tính trong một đối tượng.
+
+ // Tách mảng
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5, 6];
+console.log(arr2); // [1, 2, 3, 4, 5, 6]
+
+// Tách đối tượng
+const obj1 = { a: 1, b: 2, c: 3 };
+const obj2 = { ...obj1, d: 4, e: 5, f: 6 };
+console.log(obj2); // {a: 1, b: 2, c: 3, d: 4, e: 5, f: 6}
+
+5/Destructuring: 
+
+Destructuring cho phép gán giá trị của các thuộc tính hoặc phần tử của một đối tượng hoặc một mảng vào các biến.
+
+// Destructuring mảng
+const arr = [1, 2, 3];
+const [x, y, z] = arr;
+console.log(x); // 1
+console.log(y); // 2
+console.log(z); // 3
+
+// Destructuring đối tượng
+const obj = { a: 1, b: 2, c: 3 };
+
+

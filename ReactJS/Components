@@ -1,0 +1,31 @@
+Components là một phần quan trọng của React. Các component là các phần tử đơn giản mà bạn có thể sử dụng để tạo ra giao diện cho ứng dụng của mình.
+ Một ứng dụng React bao gồm nhiều component, được sắp xếp theo cấu trúc cây.
+
+Mỗi component được định nghĩa bằng cú pháp JavaScript và có thể chứa HTML, JSX, và các component khác. Các component có thể chứa state, props, và 
+phương thức, giúp bạn xây dựng ứng dụng phức tạp.
+
+Ví dụ, hãy xem xét một component đơn giản của React:
+import React from 'react';
+
+function Hello(props) {
+  return <h1>Hello {props.name}!</h1>;
+}
+
+export default Hello;
+Trong đoạn mã trên, chúng ta đã tạo ra một component đơn giản gọi là Hello. Component này chỉ đơn giản là hiển thị một
+ tin nhắn chào mừng với tên của người dùng được truyền vào thông qua props.
+
+Để sử dụng component này trong ứng dụng của mình, bạn có thể import nó và sử dụng như sau:
+
+import React from 'react';
+import Hello from './Hello';
+
+function App() {
+  return (
+    <div>
+      <Hello name="John" />
+    </div>
+  );
+}
+
+export default App;

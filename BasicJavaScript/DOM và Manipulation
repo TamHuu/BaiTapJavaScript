@@ -1,0 +1,50 @@
+DOM và BOM là hai khái niệm quan trọng trong lập trình web. Chúng liên quan đến cách trình duyệt web hiển thị và quản lý các thành phần trên trang web.
+
+DOM (Document Object Model) là một phần của trình duyệt web và cung cấp cách để truy cập, thay đổi và tương tác với các thành phần trên trang web,
+ chẳng hạn như các thẻ HTML, CSS và JavaScript.
+  DOM được biểu diễn dưới dạng một cây phân cấp, trong đó mỗi nút đại diện cho một thành phần trên trang web.
+
+BOM (Browser Object Model) là một phần khác của trình duyệt web và cung cấp cách để tương tác với các tính năng của trình duyệt, 
+chẳng hạn như cửa sổ trình duyệt, lịch sử trình duyệt và các thông số môi trường. BOM cũng được biểu diễn dưới dạng một cây phân cấp,
+ trong đó mỗi nút đại diện cho một tính năng của trình duyệt.
+
+Tóm lại, DOM là phần của trình duyệt web liên quan đến quản lý các thành phần trên trang web, trong khi BOM là phần liên quan đến quản lý 
+các tính năng của trình duyệt web.
+
+
+Tương tác với DOM là quá trình truy xuất và thao tác các phần tử HTML trong trang web bằng JavaScript. 
+Bằng cách tương tác với DOM, ta có thể thêm, xoá hoặc sửa đổi các phần tử trên trang web.
+
+Để thêm một phần tử vào trang web, ta sử dụng phương thức createElement() để tạo một phần tử mới, sau đó sử dụng phương thức appendChild()
+ để thêm phần tử đó vào trong một phần tử cha:
+
+ // Tạo một phần tử mới
+const newElement = document.createElement('div');
+
+// Thêm nội dung vào phần tử mới
+newElement.textContent = 'Đây là phần tử mới!';
+
+// Tìm phần tử cha để thêm phần tử mới vào
+const parentElement = document.querySelector('#parent');
+
+// Thêm phần tử mới vào phần tử cha
+parentElement.appendChild(newElement);
+
+Để xoá một phần tử, ta sử dụng phương thức removeChild() của phần tử cha:
+
+// Tìm phần tử con cần xoá
+const childElement = document.querySelector('#child');
+
+// Tìm phần tử cha của phần tử con và xoá phần tử con
+childElement.parentNode.removeChild(childElement);
+
+Để sửa đổi một phần tử, ta sử dụng thuộc tính innerHTML hoặc textContent để thay đổi nội dung của phần tử:
+
+// Tìm phần tử cần sửa đổi
+const element = document.querySelector('#element');
+
+// Thay đổi nội dung của phần tử
+element.textContent = 'Nội dung mới';
+
+Ngoài ra, ta cũng có thể sử dụng các phương thức và thuộc tính khác của DOM để thao tác với các phần tử HTML khác như lấy giá trị của một input,
+ thêm hoặc xoá class của một phần tử, đặt thuộc tính cho một phần tử, etc.

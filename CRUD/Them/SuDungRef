@@ -1,0 +1,26 @@
+// 2/Sử dụng refs để lấy giá trị từ các phần tử HTML và cập nhật state bằng cách thêm một phần tử mới:
+
+// import { useState, useRef } from 'react';
+
+// const AddItem = () => {
+//   const [items, setItems] = useState(['Item 1', 'Item 2']);
+//   const inputRef = useRef(null);
+
+//   const handleAdd = () => {
+//     const newItem = inputRef.current.value;
+//     setItems([...items, newItem]);
+//     inputRef.current.value = '';
+//   };
+
+//   return (
+//     <div>
+//       <input type="text" ref={inputRef} />
+//       <button onClick={handleAdd}>Add Item</button>
+//       <ul>
+//         {items.map(item => (
+//           <li key={item}>{item}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };

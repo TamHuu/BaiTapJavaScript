@@ -1,0 +1,34 @@
+Redux Saga là một thư viện middleware cho Redux, được sử dụng để xử lý các side effect (tác động phụ) của ứng dụng, 
+chẳng hạn như gọi API, xử lý dữ liệu bất đồng bộ, hoặc thực hiện các tác vụ không đồng bộ khác.
+
+Redux Saga cho phép các side effect được xử lý một cách đồng bộ và dễ dàng kiểm soát hơn, 
+bằng cách sử dụng các generator function để quản lý các tác vụ không đồng bộ, đồng thời cung cấp một cách tiếp cận khá linh hoạt 
+để xử lý các logic phức tạp.
+
+import { call, put, takeEvery } from 'redux-saga/effects'
+import { fetchUsersSuccess, fetchUsersError } from './actions'
+import { FETCH_USERS_REQUEST } from './types'
+import api from './api'
+
+function* fetchUsersSaga() {
+  try {
+    const response = yield call(api.fetchUsers)
+    yield put(fetchUsersSuccess(response.data))
+  } catch (error) {
+    yield put(fetchUsersError(error.message))
+  }
+}
+
+function* usersSaga() {
+  yield takeEvery(FETCH_USERS_REQUEST, fetchUsersSaga)
+}
+
+export default usersSaga
+
+Trong ví dụ trên, Redux Saga được sử dụng để xử lý một action với type là FETCH_USERS_REQUEST.
+ Khi action này được gửi đến store, middleware Redux Saga sẽ bắt đầu thực hiện một generator function có tên là usersSaga(), 
+ và sử dụng takeEvery() để lắng nghe các action với type tương ứng.
+
+Nếu action được gửi là FETCH_USERS_REQUEST, middleware sẽ thực hiện một generator function khác có tên là fetchUsersSaga(), 
+sử dụng call() để gọi API lấy danh sách người dùng từ server,
+ và put() để dispatch một action với type FETCH_USERS_SUCCESS hoặc FETCH_USERS_ERROR tùy thuộc vào kết quả trả về từ API.

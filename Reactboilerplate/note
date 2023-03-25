@@ -1,0 +1,47 @@
+React boilerplate là một project template cho phép bạn bắt đầu phát triển ứng dụng React một cách nhanh chóng và dễ dàng hơn, bằng cách cung cấp cho bạn một cấu trúc và các thành phần cơ bản để bắt đầu. Một React boilerplate có thể bao gồm các thành phần sau:
+
+Cấu trúc project rõ ràng và chuẩn mực: React boilerplate có thể cung cấp cho bạn một cấu trúc project rõ ràng và chuẩn mực, giúp bạn dễ dàng quản lý và bảo trì project của mình.
+
+Các công cụ build và bundle code: Các công cụ như Webpack hoặc Parcel được tích hợp trong React boilerplate để build và bundle code của bạn.
+
+Các thư viện và công cụ phổ biến: React boilerplate có thể tích hợp sẵn các thư viện và công cụ phổ biến như Redux, React Router, Axios, ESLint và Prettier.
+
+Các file cấu hình: React boilerplate có thể cung cấp các file cấu hình đã được thiết lập trước như babel.config.js, .eslintrc và .prettierrc.
+
+Các thành phần UI cơ bản: React boilerplate có thể cung cấp các thành phần UI cơ bản như button, input, form, layout, và các thành phần giúp hiển thị dữ liệu như tables, lists, và pagination.
+
+Các tính năng nâng cao: Một số React boilerplate có thể cung cấp các tính năng nâng cao như đăng nhập, xác thực và quản lý trạng thái của ứng dụng.
+
+Các thuộc tính quan trọng trong một React boilerplate là cấu trúc project, các file cấu hình, các công cụ build và bundle code, các thư viện và công cụ phổ biến và các thành phần UI cơ bản. Ngoài ra, còn có thể có các tính năng nâng cao như đăng nhập, xác thực và quản lý trạng thái của ứng dụng. Qua đó, bạn có thể bắt đầu phát triển ứng dụng của mình một cách nhanh chóng và dễ dàng hơn.
+
+React boilerplate có thể bao gồm các module sau:
+
+<!-- React: Thư viện JavaScript phổ biến nhất được sử dụng để phát triển các ứng dụng web.
+
+React Router: Thư viện giúp bạn quản lý các định tuyến và liên kết trong ứng dụng React của mình.
+
+Redux: Thư viện giúp bạn quản lý trạng thái của ứng dụng của mình.
+
+Redux Thunk: Thư viện middleware cho Redux để xử lý các tác vụ bất đồng bộ.
+
+Axios: Thư viện JavaScript giúp bạn gửi các yêu cầu HTTP từ client đến server.
+
+Lodash: Thư viện JavaScript hỗ trợ xử lý mảng, đối tượng, chuỗi và số.
+
+Webpack: Công cụ build code để tạo ra các bundle cho ứng dụng của bạn.
+
+Babel: Trình biên dịch JavaScript để biên dịch code mới nhất của JavaScript thành các phiên bản cũ hơn để có thể chạy trên các trình duyệt cũ hơn.
+
+ESLint: Công cụ giúp bạn kiểm tra và sửa lỗi trong code của bạn để code của bạn đáp ứng được chuẩn quy định.
+
+Prettier: Công cụ giúp bạn định dạng code của bạn để nó đẹp hơn và dễ đọc hơn.
+
+Jest: Framework kiểm thử JavaScript giúp bạn viết các test cho code của bạn.
+
+Enzyme: Thư viện giúp bạn viết các test cho các thành phần React.
+
+CSS Modules: Công nghệ giúp bạn quản lý CSS trong ứng dụng của bạn bằng cách giới hạn phạm vi của các lớp CSS trong từng thành phần.
+
+Sass: Ngôn ngữ giúp bạn viết CSS một cách dễ dàng và linh hoạt hơn.
+
+Tất cả các module trên đều có thể được tích hợp vào React boilerplate để giúp bạn bắt đầu phát triển ứng dụng của mình một cách nhanh chóng và dễ dàng hơn. -->

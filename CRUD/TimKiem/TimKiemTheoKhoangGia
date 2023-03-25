@@ -1,0 +1,63 @@
+// import { useState } from 'react';
+
+// const data = [
+//   { name: 'Product A', price: 10 },
+//   { name: 'Product B', price: 20 },
+//   { name: 'Product C', price: 30 },
+//   { name: 'Product D', price: 40 }
+// ];
+
+// const Search = () => {
+//   const [searchKeyword, setSearchKeyword] = useState('');
+//   const [minPrice, setMinPrice] = useState('');
+//   const [maxPrice, setMaxPrice] = useState('');
+//   const [filteredData, setFilteredData] = useState(data);
+
+//   const handleSearch = e => {
+//     const keyword = e.target.value;
+//     setSearchKeyword(keyword);
+//     const filtered = data.filter(item => {
+//       const isMatched = item.name.includes(keyword);
+//       const isPriceInRange = (minPrice === '' || item.price >= minPrice) && (maxPrice === '' || item.price <= maxPrice);
+//       return isMatched && isPriceInRange;
+//     });
+//     setFilteredData(filtered);
+//   };
+
+//   const handleMinPriceChange = e => {
+//     const price = parseInt(e.target.value);
+//     setMinPrice(price);
+//     const filtered = data.filter(item => {
+//       const isMatched = item.name.includes(searchKeyword);
+//       const isPriceInRange = (price === '' || item.price >= price) && (maxPrice === '' || item.price <= maxPrice);
+//       return isMatched && isPriceInRange;
+//     });
+//     setFilteredData(filtered);
+//   };
+
+//   const handleMaxPriceChange = e => {
+//     const price = parseInt(e.target.value);
+//     setMaxPrice(price);
+//     const filtered = data.filter(item => {
+//       const isMatched = item.name.includes(searchKeyword);
+//       const isPriceInRange = (minPrice === '' || item.price >= minPrice) && (price === '' || item.price <= price);
+//       return isMatched && isPriceInRange;
+//     });
+//     setFilteredData(filtered);
+//   };
+
+//   return (
+//     <div>
+//       <input type="text" value={searchKeyword} onChange={handleSearch} />
+//       <input type="number" value={minPrice} onChange={handleMinPriceChange} />
+//       <input type="number" value={maxPrice} onChange={handleMaxPriceChange} />
+//       <ul>
+//         {filteredData.map(item => (
+//           <li key={item.name}>
+//             {item.name} - {item.price}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };

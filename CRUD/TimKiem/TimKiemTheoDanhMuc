@@ -1,0 +1,61 @@
+1/Sử dụng state để lưu trữ dữ liệu tìm kiếm và danh mục được chọn:
+ Tương tự như cách thực hiện tìm kiếm đơn giản,bạn có thể sử dụng state 
+để lưu trữ dữ liệu tìm kiếm và danh mục được chọn. 
+Ví dụ:
+
+
+import { useState } from 'react';
+
+const data = [
+  { name: 'John', age: 25, category: 'Developer' },
+  { name: 'Jane', age: 30, category: 'Designer' },
+  { name: 'Bob', age: 35, category: 'Developer' },
+  { name: 'Alice', age: 40, category: 'Manager' }
+];
+
+const Search = () => {
+  const [searchKeyword, setSearchKeyword] = useState('');
+  const [category, setCategory] = useState('');
+  const [filteredData, setFilteredData] = useState(data);
+
+  const handleSearch = e => {
+    const keyword = e.target.value;
+    setSearchKeyword(keyword);
+    const filtered = data.filter(item => {
+      const isMatched = item.name.includes(keyword);
+      const isCategoryMatched = category ? item.category === category : true;
+      return isMatched && isCategoryMatched;
+    });
+    setFilteredData(filtered);
+  };
+
+  const handleCategoryChange = e => {
+    const category = e.target.value;
+    setCategory(category);
+    const filtered = data.filter(item => {
+      const isMatched = item.name.includes(searchKeyword);
+      const isCategoryMatched = category ? item.category === category : true;
+      return isMatched && isCategoryMatched;
+    });
+    setFilteredData(filtered);
+  };
+
+  return (
+    <div>
+      <input type="text" value={searchKeyword} onChange={handleSearch} />
+      <select value={category} onChange={handleCategoryChange}>
+        <option value="">All Categories</option>
+        <option value="Developer">Developer</option>
+        <option value="Designer">Designer</option>
+        <option value="Manager">Manager</option>
+      </select>
+      <ul>
+        {filteredData.map(item => (
+          <li key={item.name}>
+            {item.name} - {item.age} - {item.category}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};

@@ -1,0 +1,30 @@
+Trong JavaScript, biến là một vị trí để lưu trữ giá trị, có thể thay đổi trong quá trình thực thi chương trình. 
+Một biến được khai báo bằng các từ khóa var, let, hoặc const.
+
+Phạm vi (scope) của một biến trong JavaScript là vị trí mà biến đó có thể được truy cập trong chương trình.
+ Có hai loại phạm vi: phạm vi toàn cục (global scope) và phạm vi cục bộ (local scope).
+
+ 1/Phạm vi toàn cục (global scope): 
+ 
+ Biến được khai báo trong phạm vi toàn cục có thể được truy cập từ bất kỳ đâu trong chương trình.
+
+var name = "John"; // biến toàn cục
+
+function greet() {
+  console.log("Hello, " + name + "!");
+}
+
+greet(); // Hello, John!
+
+ 2/Phạm vi cục bộ (local scope): 
+
+ Biến được khai báo trong một hàm hoặc khối lệnh có phạm vi cục bộ chỉ có thể được truy cập từ bên trong hàm hoặc khối lệnh đó.
+ 
+ function greet() {
+  var name = "John"; // biến cục bộ
+  console.log("Hello, " + name + "!");
+}
+
+greet(); // Hello, John!
+
+console.log(name); // Lỗi: name is not defined

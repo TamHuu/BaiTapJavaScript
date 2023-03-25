@@ -1,0 +1,46 @@
+// import { useState } from 'react';
+
+// const EditItem = () => {
+//   const [items, setItems] = useState(['Item 1', 'Item 2']);
+//   const [editValue, setEditValue] = useState('');
+//   const [editIndex, setEditIndex] = useState(null);
+
+//   const handleEdit = index => {
+//     setEditValue(items[index]);
+//     setEditIndex(index);
+//   };
+
+//   const handleSave = () => {
+//     const newItems = [...items];
+//     newItems[editIndex] = editValue;
+//     setItems(newItems);
+//     setEditValue('');
+//     setEditIndex(null);
+//   };
+
+//   return (
+//     <div>
+//       <ul>
+//         {items.map((item, index) => (
+//           <li key={item}>
+//             {editIndex === index ? (
+//               <>
+//                 <input
+//                   type="text"
+//                   value={editValue}
+//                   onChange={e => setEditValue(e.target.value)}
+//                 />
+//                 <button onClick={handleSave}>Save</button>
+//               </>
+//             ) : (
+//               <>
+//                 {item}
+//                 <button onClick={() => handleEdit(index)}>Edit</button>
+//               </>
+//             )}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };

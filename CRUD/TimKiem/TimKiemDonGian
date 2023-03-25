@@ -1,0 +1,53 @@
+1/Sử dụng hàm filter:
+ Hàm filter được sử dụng để lọc các phần tử của một mảng dựa trên một điều kiện nào đó. Để thực hiện tìm kiếm đơn giản,
+ bạn có thể sử dụng hàm filter để lọc ra các phần tử phù hợp với từ khóa tìm kiếm. 
+ Ví dụ:
+ const data = [
+  { name: 'John', age: 25 },
+  { name: 'Jane', age: 30 },
+  { name: 'Bob', age: 35 },
+  { name: 'Alice', age: 40 }
+];
+
+const searchKeyword = 'John';
+
+const filteredData = data.filter(item => item.name.includes(searchKeyword));
+
+console.log(filteredData); // [{ name: 'John', age: 25 }]
+2/Sử dụng state để lưu trữ dữ liệu tìm kiếm:
+ Bạn có thể sử dụng state 
+để lưu trữ dữ liệu tìm kiếm và cập nhật UI dựa trên dữ liệu đó.
+ Ví dụ:
+ import { useState } from 'react';
+
+const data = [
+  { name: 'John', age: 25 },
+  { name: 'Jane', age: 30 },
+  { name: 'Bob', age: 35 },
+  { name: 'Alice', age: 40 }
+];
+
+const Search = () => {
+  const [searchKeyword, setSearchKeyword] = useState('');
+  const [filteredData, setFilteredData] = useState(data);
+
+  const handleSearch = e => {
+    const keyword = e.target.value;
+    setSearchKeyword(keyword);
+    const filtered = data.filter(item => item.name.includes(keyword));
+    setFilteredData(filtered);
+  };
+
+  return (
+    <div>
+      <input type="text" value={searchKeyword} onChange={handleSearch} />
+      <ul>
+        {filteredData.map(item => (
+          <li key={item.name}>
+            {item.name} - {item.age}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};

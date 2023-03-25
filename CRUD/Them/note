@@ -1,0 +1,5 @@
+// Lưu ý: Khi thêm một phần tử mới vào danh sách bằng cách cập nhật state, 
+// bạn nên sử dụng cú pháp 
+// [...prevItems, newItem] 
+// hoặc items.concat(newItem)
+//  để tránh thay đổi trực tiếp giá trị của state.

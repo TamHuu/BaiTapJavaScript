@@ -1,0 +1,23 @@
+Để sắp xếp theo thứ tự từ điển trong React JS, bạn có thể sử dụng phương thức .sort() 
+kết hợp với phương thức localeCompare() của JavaScript.
+
+Ví dụ: Giả sử bạn có một danh sách các từ và bạn muốn sắp xếp theo thứ tự từ điển. Bạn có thể thực hiện như sau:
+
+1/Tạo một state để lưu trữ danh sách các từ:
+
+const [words, setWords] = useState(["banana", "apple", "cherry", "date"]);
+
+2/Tạo một hàm xử lý sự kiện khi người dùng bấm vào nút sắp xếp:
+
+const handleSort = () => {
+  const sortedWords = [...words].sort((a, b) => a.localeCompare(b));
+  setWords(sortedWords);
+};
+
+3/Hiển thị danh sách các từ đã sắp xếp:
+
+{words.map((word) => (
+  <div key={word}>
+    <p>{word}</p>
+  </div>
+))}

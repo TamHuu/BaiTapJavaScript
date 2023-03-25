@@ -1,0 +1,18 @@
+JSX là một phần quan trọng của React. Nó là một cú pháp giúp tạo ra các component dễ dàng hơn bằng cách kết hợp HTML và JavaScript.
+
+Ví dụ, hãy xem xét một component đơn giản của React bằng cách sử dụng JSX để tạo ra một thẻ div:
+import React from 'react';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello World!</h1>
+      <p>This is a React app.</p>
+    </div>
+  );
+}
+
+export default App;
+Trong đoạn mã trên, chúng ta đã sử dụng cú pháp JSX để tạo ra một thẻ div. Bên trong thẻ div, chúng ta đã sử dụng các thẻ HTML thông thường như h1 và p để tạo ra nội dung của component.
+
+JSX cũng cho phép bạn tạo ra các biểu thức JavaScript bên trong các thẻ, bằng cách sử dụng cặp dấu ngoặc nhọn {}.

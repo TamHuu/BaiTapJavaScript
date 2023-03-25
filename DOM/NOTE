@@ -1,0 +1,28 @@
+Khi tương tác với DOM trong JavaScript, có một số thuộc tính quan trọng mà bạn cần biết. Dưới đây là một số thuộc tính phổ biến khi làm việc với DOM:
+
+1/document object: Đây là đối tượng mà bạn sẽ làm việc khi tương tác với DOM trong JavaScript. 
+Nó đại diện cho toàn bộ trang web và cho phép bạn truy cập các phần tử HTML trên trang.
+
+2/getElementById(): Phương thức này được sử dụng để lấy một phần tử HTML từ trang bằng cách truyền vào một ID.
+
+3/getElementsByClassName(): Phương thức này được sử dụng để lấy tất cả các phần tử HTML trên trang có cùng tên lớp.
+
+4/getElementsByTagName(): Phương thức này được sử dụng để lấy tất cả các phần tử HTML trên trang có cùng tên thẻ.
+
+5/innerHTML: Thuộc tính này được sử dụng để lấy hoặc đặt nội dung HTML của một phần tử.
+
+6/innerText: Thuộc tính này được sử dụng để lấy hoặc đặt văn bản của một phần tử.
+
+7/setAttribute(): Phương thức này được sử dụng để đặt thuộc tính trên một phần tử HTML.
+
+8/addEventListener(): Phương thức này được sử dụng để gắn một sự kiện với một phần tử HTML.
+
+9/removeEventListener(): Phương thức này được sử dụng để loại bỏ một sự kiện được gắn với một phần tử HTML.
+
+10/style: Thuộc tính này được sử dụng để đặt các thuộc tính CSS cho một phần tử HTML.
+
+
+
+
+
+

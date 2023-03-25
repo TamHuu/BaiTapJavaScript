@@ -1,0 +1,33 @@
+Trong React, có một số hook (không phải tất cả) được cung cấp bởi React để bạn có thể sử dụng chúng trong các component của mình.
+ Dưới đây là một số hook phổ biến trong React:
+
+1/useState:
+ Hook này cho phép bạn sử dụng state trong functional component. Nó trả về một array gồm hai giá trị: state hiện tại và hàm để cập nhật state.
+
+2/useEffect: 
+Hook này được sử dụng để thực hiện các tác vụ liên quan đến lifecycle của component, 
+chẳng hạn như fetch dữ liệu từ API, tạo event listener hoặc thay đổi title trang.
+ Nó có thể được sử dụng để thay thế cho các lifecycle method trong class component.
+
+3/useContext:
+ Hook này cho phép bạn truy cập context trong functional component. 
+ Nó trả về giá trị được cung cấp bởi Context Provider ở trên của component tree.
+
+4/useRef:
+ Hook này cho phép bạn tạo một tham chiếu đến một phần tử trong DOM hoặc một biến khác và lưu giữ giá trị của nó giữa các render.
+  Điều này hữu ích khi bạn cần thao tác với DOM hoặc theo dõi các giá trị trước và sau của một biến.
+
+5/useCallback: 
+Hook này cho phép bạn lưu trữ một hàm callback giữa các render, giúp tránh việc tạo lại hàm khi component render lại.
+
+6/useMemo: 
+Hook này giúp bạn tối ưu hiệu suất bằng cách lưu giữ giá trị được tính toán trong các render trước đó, 
+và trả về giá trị đó khi các props đầu vào không thay đổi.
+
+7/useReducer:
+ Hook này cho phép bạn quản lý state bằng cách sử dụng reducer function giống như trong Redux.
+ Nó giúp tái sử dụng logic state và tạo các action để thay đổi state.
+
+8/useLayoutEffect:
+ Tương tự useEffect, hook này được sử dụng để thực hiện các tác vụ liên quan đến lifecycle của component.
+  Tuy nhiên, nó được gọi ngay trước khi browser thực hiện các thay đổi DOM, giúp đảm bảo rằng các thay đổi được áp dụng một cách đồng bộ.

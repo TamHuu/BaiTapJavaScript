@@ -1,0 +1,38 @@
+Lodash là một thư viện JavaScript chuyên về xử lý dữ liệu và bao gồm các hàm tiện ích để xử lý mảng, đối tượng, chuỗi, số và nhiều hơn nữa.
+ Lodash cung cấp các hàm như map, reduce, filter, sort, và nhiều hơn nữa để giúp giải quyết các vấn đề xử lý dữ liệu phổ biến trong JavaScript.
+
+Cách sử dụng Lodash trong ứng dụng JavaScript như sau:
+
+1/Cài đặt Lodash bằng lệnh sau:
+
+npm install lodash
+
+2/Import Lodash vào trong ứng dụng JavaScript bằng cách thêm đoạn mã sau vào đầu tập tin JavaScript:
+
+import _ from 'lodash';
+
+3/Sử dụng các hàm tiện ích của Lodash để xử lý dữ liệu. Ví dụ:
+
+import _ from 'lodash';
+
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = _.sum(numbers);
+
+const squaredNumbers = _.map(numbers, function(num) {
+  return num * num;
+});
+
+const filteredNumbers = _.filter(numbers, function(num) {
+  return num % 2 === 0;
+});
+
+console.log(sum); // 15
+console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+console.log(filteredNumbers); // [2, 4]
+
+Trong ví dụ trên, Lodash được sử dụng để tính tổng các phần tử trong mảng numbers bằng hàm sum(), 
+tính bình phương của các phần tử trong mảng bằng hàm map(), và lọc các phần tử chẵn trong mảng bằng hàm filter(). 
+Các kết quả được lưu trữ trong các biến sum, squaredNumbers, và filteredNumbers.
+
+Ngoài ra, Lodash còn cung cấp nhiều hàm khác để xử lý dữ liệu như chunk, flatten, merge, clone, và nhiều hơn nữa.

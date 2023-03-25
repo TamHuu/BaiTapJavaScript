@@ -1,0 +1,19 @@
+Middleware là một khái niệm phổ biến trong lập trình, đặc biệt là trong các ứng dụng web.
+ Trong ngữ cảnh của web, middleware là một chương trình con hoặc một hàm trung gian được sử dụng để xử lý các yêu cầu (request) từ client đến server,
+  hoặc để xử lý các phản hồi (response) từ server đến client.
+
+Middleware được sử dụng để tách rời các công việc và phân tách chúng thành các lớp độc lập nhau, 
+giúp cho mã của bạn trở nên dễ bảo trì và mở rộng hơn.
+
+ Middleware có thể được sử dụng để thực hiện các chức năng như:
+
++ Xác thực người dùng và quyền truy cập.
++ Xử lý và ghi log các yêu cầu và phản hồi.
++ Nén và giải nén dữ liệu truyền tải.
++ Xử lý lỗi và trả về các thông báo lỗi thích hợp cho người dùng.
++ Chuyển tiếp yêu cầu đến các hệ thống khác hoặc đến các server khác.
+
+
+Trong các framework web như ExpressJS của Node.js, middleware là một khái niệm quan trọng,
+ cho phép các ứng dụng web xử lý các yêu cầu và phản hồi một cách động, đồng thời giúp các nhà phát triển xây dựng các ứng dụng web linh hoạt và 
+ có khả năng mở rộng cao.
