@@ -1,0 +1,9 @@
+- Destructuring, Rest Parameter, Spread Syntax
+- Tham trị và tham chiếu
+- Toán tử Logic, template string
+- ES6 class và this
+- Các loại function: arrow function, HOC, currying, callback
+- Bất đồng bộ với Promise, async await
+- ES6 module
+- DOM
+- Storage (Local Storage, Cookie, Session Storage)
